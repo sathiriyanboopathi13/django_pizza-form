@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'pizza/base.html'%}
+{% block 'body' %}
+<h1>edit order page</h1>
+<h2>{{ note }}</h2>
+<form action="{% url 'edit' pk %}" method="post">
+    {% csrf_token%}
+    {{ form }}
+    <input type="submit" value="Order">
+</form>
+{% endblock %}
+</body>
+</html>

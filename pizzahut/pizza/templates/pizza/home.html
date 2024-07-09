@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% extends 'pizza/base.html'%}
+{% block 'body' %}
+{% load static %}
+<img src="{% static 'pizza_image.jpg'%}"/>
+<h1> Welcome to PizzaHut </h1>
+
+<a href="{% url 'order' %}">order pizza</a>
+{% endblock %}
+</body>
+</html>

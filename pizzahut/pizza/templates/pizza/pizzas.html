@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'pizza/base.html'%}
+{% block 'body' %}
+<h1> order multiple pizza</h1>
+<form action="{% url 'pizzas' %}" method="post">
+    {% csrf_token%}
+    {{ form_set }}
+    <input type="submit" value="Order">
+</form>
+{% endblock %}
+</body>
+</html>
